@@ -83,7 +83,7 @@
         </a>
         </li>
         <li class="bold">
-        <a class="waves-effect waves-cyan"
+        <a
           href="{{route('admin.store')}}"
           class="{{(request()->is('admin/store'.'*')) ? 'active '.$configData['activeMenuColor'] : '' }}"
                   @if(!empty($configData['activeMenuColor'])) {{'style=background:none;box-shadow:none;'}} @endif>
