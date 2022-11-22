@@ -4,7 +4,7 @@
 (function (window, document, $) {
    //Sample toast
    setTimeout(function () {
-      M.toast({ html: "Hey! I am a toast." });
+      M.toast({ html: "Welcome!" });
    }, 2000);
 
    // Check first if any of the task is checked

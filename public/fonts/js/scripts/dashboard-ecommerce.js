@@ -3,7 +3,7 @@
 (function(window, document, $) {
    //Sample toast
    setTimeout(function() {
-      M.toast({ html: "Hey! I am a toast." });
+      M.toast({ html: "Welcome!" });
    }, 2000);
 
    // Line chart with color shadow: Revenue for 2018 Chart

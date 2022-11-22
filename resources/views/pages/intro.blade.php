@@ -28,11 +28,8 @@
             <div class="carousel-item slide-1">
               <img src="{{asset('images/gallery/intro-slide-1.png')}}" alt=""
                 class="responsive-img animated fadeInUp slide-1-img">
-              <h5 class="intro-step-title mt-7 center animated fadeInUp">Welcome to Materialize</h5>
-              <p class="intro-step-text mt-5 animated fadeInUp">Materialize is a Material Design Admin
-                Template is the excellent responsive google material design inspired multipurpose admin
-                template. Materialize has a huge collection of material design animation & widgets, UI
-                Elements.</p>
+              <h5 class="intro-step-title mt-7 center animated fadeInUp">Welcome to Dashboard SuperGold</h5>
+              <p class="intro-step-text mt-5 animated fadeInUp">Silahkan dapat melakukan maintenance disetiap transaksi di SuperGold</p>
             </div>
             <div class="carousel-item slide-2">
               <img src="{{asset('images/gallery/intro-features.png')}}" alt="" class="responsive-img slide-2-img">
