@@ -358,12 +358,12 @@
    var LineSL2ctx = document.getElementById("custom-line-chart-sample-two").getContext("2d");
 
    var gradientStroke = LineSL2ctx.createLinearGradient(500, 0, 0, 200);
-   gradientStroke.addColorStop(0, "#8e24aa");
-   gradientStroke.addColorStop(1, "#ff6e40");
+   gradientStroke.addColorStop(0, "#3124aa");
+   gradientStroke.addColorStop(1, "#a740ff");
 
    var gradientFill = LineSL2ctx.createLinearGradient(500, 0, 0, 200);
-   gradientFill.addColorStop(0, "#8e24aa");
-   gradientFill.addColorStop(1, "#ff6e40");
+   gradientFill.addColorStop(0, "#3124aa");
+   gradientFill.addColorStop(1, "#a740ff");
 
    var SL2Chart = new Chart(LineSL2ctx, {
       type: "line",

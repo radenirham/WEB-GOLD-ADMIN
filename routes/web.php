@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GoldController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ManufactureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,14 @@ Route::prefix('admin')->group(function () {
             Route::post('/user/store', [UserController::class, 'store'])->name('admin.user.store');
             Route::post('/user/update', [UserController::class, 'update'])->name('admin.user.update');
             Route::get('/user/delete/{number}', [UserController::class, 'destroy']);
+
+            Route::get('/manufacture', [ManufactureController::class, 'index'])->name('admin.manufacture');
+            Route::get('/manufacture/add', [ManufactureController::class, 'add'])->name('admin.manufacture.add');
+            Route::post('/manufacture/store', [ManufactureController::class, 'store'])->name('admin.manufacture.store');
+            Route::get('/manufacture/edit/{number}', [ManufactureController::class, 'edit']);
+            Route::post('/manufacture/store', [ManufactureController::class, 'store'])->name('admin.manufacture.store');
+            Route::post('/manufacture/update', [ManufactureController::class, 'update'])->name('admin.manufacture.update');
+            Route::get('/manufacture/delete/{number}', [ManufactureController::class, 'destroy']);
 
             Route::get('/store', [StoreController::class, 'index'])->name('admin.store');
             Route::get('/store/add', [StoreController::class, 'add'])->name('admin.store.add');

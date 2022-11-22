@@ -140,7 +140,7 @@ function chartInit() {
     height: '50',
     width: '80',
     barSpacing: 2,
-    barColor: '#FF4081',
+    barColor: '#6d788d',
     //tooltipFormat: $.spformat('{{value}}', 'tooltip-class')
   });
 

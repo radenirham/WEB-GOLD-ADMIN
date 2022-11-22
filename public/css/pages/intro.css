@@ -45,7 +45,7 @@ Intro
 #intro .modal .modal-content .carousel.carousel-slider .carousel-fixed-item .middle-indicator-text.moveNextCarousel:hover
 {
     color: #fff !important;
-    background-color: #8e24aa;
+    background-color: #3124aa;
 }
 
 #intro .modal .modal-content .carousel.carousel-slider .carousel-fixed-item .middle-indicator-text.movePrevCarousel
@@ -59,7 +59,7 @@ Intro
 #intro .modal .modal-content .carousel.carousel-slider .carousel-fixed-item .middle-indicator-text.movePrevCarousel:hover
 {
     color: #fff !important;
-    background-color: #8e24aa;
+    background-color: #3124aa;
 }
 
 #intro .modal .modal-content .carousel.carousel-slider .carousel-fixed-item i.material-icons
@@ -83,7 +83,7 @@ Intro
 
 #intro .modal .modal-content .carousel.carousel-slider .carousel-item .intro-step-title
 {
-    color: #8e24aa;
+    color: #3124aa;
 }
 
 #intro .modal .modal-content .carousel.carousel-slider .carousel-item.slide-2 .select-wrapper input.select-dropdown
@@ -96,7 +96,7 @@ Intro
     position: relative;
     top: 7px;
 
-    color: #8e24aa;
+    color: #3124aa;
 }
 
 #intro .modal .modal-content .carousel.carousel-slider .carousel-item.slide-3 .get-started
@@ -116,7 +116,7 @@ Intro
 
 #intro .modal .modal-content .carousel.carousel-slider ul.indicators .indicator-item.active
 {
-    background-color: #8e24aa;
+    background-color: #3124aa;
 }
 
 #intro .modal .modal-content:after

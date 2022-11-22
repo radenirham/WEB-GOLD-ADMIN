@@ -1,6 +1,6 @@
 <div class="navbar @if(($configData['isNavbarFixed'])=== true){{'navbar-fixed'}} @endif">
   <nav
-    class="{{$configData['navbarMainClass']}} @if($configData['isNavbarDark']=== true) {{'navbar-dark'}} @elseif($configData['isNavbarDark']=== false) {{'navbar-light'}} @elseif(!empty($configData['navbarBgColor'])) {{$configData['navbarBgColor']}} @else {{$configData['navbarMainColor']}} @endif">
+    class="{{$configData['navbarMainClass']}} {{'navbar-dark'}}">
     <div class="nav-wrapper">
       <div class="header-search-wrapper hide-on-med-and-down">
         <i class="material-icons">search</i>

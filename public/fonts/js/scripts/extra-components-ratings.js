@@ -4,7 +4,7 @@ $(document).ready(function () {
   // default rate init
   $(".rateYo").rateYo({
     rating: 3.6,
-    ratedFill: "#ff4081",
+    ratedFill: "#6d788d",
     onChange: function (rating, rateYoInstance) {
       $(this).next().text(rating);
     }
@@ -16,7 +16,7 @@ $(document).ready(function () {
     rating: 1.6,
     multiColor: {
       "startColor": "#3f51b5", //indigo
-      "endColor": "#ff4081"  //pink
+      "endColor": "#6d788d"  //pink
     }
   });
   // num rate init

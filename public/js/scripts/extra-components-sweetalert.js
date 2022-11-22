@@ -93,7 +93,7 @@ $(function () {
 		swal({
 			title: "Sweet!",
 			text: "Here's a custom image.",
-			icon: '../../../images/favicon/apple-touch-icon-152x152.png'
+			icon: '../../../images/favicon/sg-icon.png'
 		});
 	});
 

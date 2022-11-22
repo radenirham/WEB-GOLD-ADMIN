@@ -1,6 +1,6 @@
 <!-- BEGIN: Footer-->
 <footer
-  class="{{$configData['mainFooterClass']}} @if($configData['isFooterFixed']=== true){{'footer-fixed'}}@else {{'footer-static'}} @endif @if($configData['isFooterDark']=== true) {{'footer-dark'}} @elseif($configData['isFooterDark']=== false) {{'footer-light'}} @else {{$configData['mainFooterColor']}} @endif">
+  class="{{$configData['mainFooterClass']}} @if($configData['isFooterFixed']=== true){{'footer-fixed'}}@else {{'footer-static'}} @endif {{'footer-dark'}}">
   <div class="footer-copyright">
     <div class="container">
       <span>&copy; 2022 <a href="https://supergold.co.id"

@@ -29,9 +29,9 @@
           {{-- right sidebar  --}}
           @include('pages.sidebar.right-sidebar')
 
-          @if($configData["isFabButton"] === true)
+          {{-- @if($configData["isFabButton"] === true)
             @include('pages.sidebar.fab-menu')
-          @endif
+          @endif --}}
         </div>
         {{-- overlay --}}
         <div class="content-overlay"></div>
@@ -44,7 +44,7 @@
 
   @if($configData['isCustomizer'] === true && isset($configData['isCustomizer']))
     <!-- Theme Customizer -->
-    @include('pages.partials.customizer')
+    {{-- @include('pages.partials.customizer') --}}
     <!--/ Theme Customizer -->
   @endif
 
