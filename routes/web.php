@@ -24,9 +24,11 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::prefix('auth')->group(function () {
-        Route::get('login', [AuthController::class, 'login'])->name('loginadmin');
+        Route::get('/register', [AuthController::class, 'register'])->name('regisadmin');
+        Route::get('/login', [AuthController::class, 'login'])->name('loginadmin');
         Route::post('/login', [AuthController::class, 'submit'])->name('admin.auth.login');
-        Route::post('/register', [AuthController::class, 'register']);
+        
+        Route::post('/register', [AuthController::class, 'submit_regis'])->name('adminregis');
 
         Route::middleware(['admin'])->group(function () {
             Route::post('/logout', [AuthController::class, 'logout'])->name('admin.logout');

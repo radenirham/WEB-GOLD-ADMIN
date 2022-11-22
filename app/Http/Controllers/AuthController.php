@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -19,6 +20,15 @@ class AuthController extends Controller
         $pageConfigs = ['bodyCustomClass' => 'login-bg', 'isCustomizer' => false];
 
         return view('/auth/login', [
+            'pageConfigs' => $pageConfigs
+        ]);
+    }
+
+    public function register()
+    {
+        $pageConfigs = ['bodyCustomClass' => 'register-bg', 'isCustomizer' => false];
+
+        return view('/auth/register', [
             'pageConfigs' => $pageConfigs
         ]);
     }
@@ -39,6 +49,32 @@ class AuthController extends Controller
             
             return back();
         }
+    }
+
+    public function submit_regis(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+            'name' => 'required'
+        ]);
+
+        try{
+            $admin = [
+                    "name" => $request->name,
+                    "email" => $request->email,
+                    "role" => 'admin',
+                    "password" => bcrypt($request->password),
+                ];
+                DB::table("admins")->insert($admin);
+                Toastr::success('Success Register Admin');
+
+                return redirect()->route('loginadmin');
+        }catch (\Exception $e) {
+            return redirect()->route('regisadmin');
+            Toastr::error('Failed Register Admin');
+        }
+        
     }
 
     public function logout(Request $request)

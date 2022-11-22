@@ -2,7 +2,7 @@
 @extends('layouts.contentLayoutMaster')
 
 {{-- page title --}}
-@section('title','Dashboard Modern')
+@section('title','Dashboard')
 
 {{-- vendor styles --}}
 @section('vendor-style')

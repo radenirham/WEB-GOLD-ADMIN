@@ -18,7 +18,6 @@
       <div class="row">
         <div class="input-field col s12">
           <h5 class="ml-4">Register</h5>
-          <p class="ml-4">Join to our community now !</p>
         </div>
       </div>
       <div class="row margin">
@@ -58,14 +57,6 @@
             {{ $message }}
           </small>
           @enderror
-        </div>
-      </div>
-      <div class="row margin">
-        <div class="input-field col s12">
-          <i class="material-icons prefix pt-2">lock_outline</i>
-          <input id="password-confirm" type="password" name="password_confirmation"
-            autocomplete="new-password">
-          <label for="password-confirm">Password again</label>
         </div>
       </div>
       <div class="row">

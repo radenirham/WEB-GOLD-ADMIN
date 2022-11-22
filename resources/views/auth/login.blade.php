@@ -26,7 +26,7 @@
           <i class="material-icons prefix pt-2">person_outline</i>
           <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email"
             value="{{ old('email') }}"  autocomplete="email" autofocus>
-          <label for="email" class="center-align">{{ __('Username') }}</label>
+          <label for="email" class="center-align">Email</label>
           @error('email')
           <small class="red-text ml-7" >
             {{ $message }}
@@ -66,7 +66,7 @@
       </div>
       <div class="row">
         <div class="input-field col s6 m6 l6">
-          <p class="margin medium-small"><a href="">Register Now!</a></p>
+          <p class="margin medium-small"><a href="{{route('regisadmin')}}">Register Now!</a></p>
         </div>
         <div class="input-field col s6 m6 l6">
           <p class="margin right-align medium-small">
