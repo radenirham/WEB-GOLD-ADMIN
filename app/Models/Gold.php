@@ -14,4 +14,8 @@ class Gold extends Model
     protected $primaryKey = "GOLD_ID";
     protected $table = "golds";
     public $incrementing = false;
+
+    public function manufacture() {
+        return $this->belongsTo(Manufacture::class, "manufacture_id", "id");
+    }
 } 

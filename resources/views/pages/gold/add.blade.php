@@ -50,8 +50,12 @@
 
                 <div class="col s12">
                   <div class="input-field col s12">
-                    <input type="text" name="manufactured_by" class="validate">
-                    <label for="manufactured_by">Manufaktur</label>
+                    <select name="manufactured_id" id="manufactured_id" class="select2 browser-default">
+                      <option value=''> --Pilih Manufaktur --</option>
+                      @foreach ($manufacture as $item)
+                          <option value="{{ $item->id }}"> {{ $item->name }}</option>
+                      @endforeach
+                    </select>
                   </div>
                 </div>
 

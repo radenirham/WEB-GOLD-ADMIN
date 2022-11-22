@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gold;
+use App\Models\Manufacture;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Validator;
 use Carbon\Carbon;
@@ -19,7 +20,7 @@ class GoldController extends Controller
 
     public function index()
     {
-        $golds=Gold::all();
+        $golds=Gold::with('manufacture')->get();
         $breadcrumbs = [
         ['link' => "modern", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Gold"], ['name' => "Index"],
         ];
@@ -35,8 +36,9 @@ class GoldController extends Controller
             ['link' => "modern", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Form"], ['name' => "Add"],
         ];
         //Pageheader set true for breadcrumbs
+        $manufacture=Manufacture::all();
         $pageConfigs = ['pageHeader' => true, 'isFabButton' => true];
-        return view('pages.gold.add ', ['breadcrumbs' => $breadcrumbs], ['pageConfigs' => $pageConfigs]);
+        return view('pages.gold.add ',compact('manufacture'), ['pageConfigs' => $pageConfigs], ['breadcrumbs' => $breadcrumbs]);
     }
 
     public function store(Request $request)
@@ -45,7 +47,7 @@ class GoldController extends Controller
 		 	'weight'=>'required',
             'produced_by'=>'required',
             'fineness'=>'required',
-            'manufactured_by'=>'required',
+            'manufactured_id'=>'required',
 		 	'generate'=>'required'
 		 ]);
 
@@ -55,15 +57,17 @@ class GoldController extends Controller
             $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
         
             for ($i = 0; $i < $request->generate ; $i++) { 
+                $serial = strtoupper(uniqid()).str_pad($i+1, 4, '0', STR_PAD_LEFT);
                 $gold = [
                     "GOLD_ID" => uniqid("GLD-"),
                     "GOLD_WEIGHT" => $request->weight,
                     "produced_by" => $request->produced_by,
-                    "manufactured_by" => $request->manufactured_by,
+                    "manufacture_id" => $request->manufactured_id,
                     "fineness" => $request->fineness,
                     "GOLD_CREATE_BY" => 'admin',
                     "GOLD_CREATED" => Carbon::now(),
-                    "GOLD_SERIAL" => $gen_code,
+                    "GOLD_SERIAL" => $serial,
+                    "generated_code" => $gen_code,
                 ];
                 DB::table("golds")->insert($gold);
                 $log=[

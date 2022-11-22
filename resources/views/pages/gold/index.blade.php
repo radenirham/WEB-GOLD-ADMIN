@@ -60,7 +60,7 @@
                     <td>{{$item->GOLD_SERIAL}}</td>
                     <td>{{$item->fineness}}</td>
                     <td>{{$item->produced_by}}</td>
-                    <td>{{$item->manufactured_by}}</td>
+                    <td>{{$item->manufacture->name}}</td>
                     <td class="text-center">
                             <a href="#" class="btn btn-sm" method="post">
                             <i class="material-icons">edit</i>
