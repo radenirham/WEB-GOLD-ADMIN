@@ -55,7 +55,7 @@
                 </a>
               </li>
               <li class="{{(request()->is('admin/gold/download'.'*')) ? 'active' : '' }}">
-                <a href="#"
+                <a href="{{route('admin.gold.donwloadform')}}"
                   class="{{(request()->is('admin/gold/download'.'*')) ? 'active '.$configData['activeMenuColor'] : '' }}"
                   @if(!empty($configData['activeMenuColor'])) {{'style=background:none;box-shadow:none;'}} @endif>
                   <i class="material-icons">radio_button_unchecked</i>

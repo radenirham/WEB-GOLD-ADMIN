@@ -6649,7 +6649,7 @@ small
 .btn-small:focus,
 .btn-floating:focus
 {
-    background-color: #ff0d5f;
+    background-color: #6d788d;
 }
 
 .btn,
@@ -6671,7 +6671,7 @@ small
 .btn-large:hover,
 .btn-small:hover
 {
-    background-color: #ff5a92;
+    background-color: #666cff;
 }
 
 .btn-floating
@@ -9630,7 +9630,7 @@ input[type=range]::-ms-thumb
 .sidenav li > a.btn-small:hover,
 .sidenav li > a.btn-large:hover
 {
-    background-color: #ff5a92;
+    background-color: #666cff;
 }
 
 .sidenav li > a.btn-floating:hover

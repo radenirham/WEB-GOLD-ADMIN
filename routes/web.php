@@ -39,7 +39,9 @@ Route::prefix('admin')->group(function () {
             Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
             Route::get('/gold', [GoldController::class, 'index'])->name('admin.gold');
             Route::get('/gold/add', [GoldController::class, 'add'])->name('admin.gold.add');
+            Route::get('/gold/download', [GoldController::class, 'download_view'])->name('admin.gold.donwloadform');
             Route::post('/gold/store', [GoldController::class, 'store'])->name('admin.gold.store');
+            Route::post('/gold/download', [GoldController::class, 'download'])->name('admin.gold.download');
             Route::get('/gold/delete/{number}', [GoldController::class, 'destroy']);
 
             Route::get('/user', [UserController::class, 'index'])->name('admin.user');

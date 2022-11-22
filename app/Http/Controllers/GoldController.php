@@ -112,6 +112,51 @@ class GoldController extends Controller
         
     }
 
+    public function download_view(Request $request)
+    {
+        $breadcrumbs = [
+            ['link' => "modern", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Form"], ['name' => "Download"],
+        ];
+        //Pageheader set true for breadcrumbs
+        $pageConfigs = ['pageHeader' => true, 'isFabButton' => true];
+        return view('pages.gold.download ', ['pageConfigs' => $pageConfigs], ['breadcrumbs' => $breadcrumbs]);
+    }
+
+    public function download(Request $request)
+    {
+        $request->validate([
+		 	'generate_code'=>'required',
+		 ]);
+
+        $filePath = public_path($request->generate_code.'.zip');
+        if(file_exists($filePath))
+        {
+            $headers = ['Content-Type: application/zip'];
+            $fileName = $request->generate_code.'.zip';
+            return response()->download($filePath, $fileName, $headers);
+        }else{
+            $golds=Gold::where('generated_code', $request->generate_code)->get();
+            $zip_file = $request->generate_code.'.zip'; // Name of our archive to download
+            $zip = new \ZipArchive();
+            $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
+        
+            foreach($golds as $gold) { 
+                QrCode::format('png')->size(1000)->generate($gold->GOLD_ID, public_path('images/'.$gold->GOLD_ID.'.png') );
+                $qr_file = 'images/'.$gold->GOLD_ID.'.png';
+                $zip->addFile(public_path($qr_file), $qr_file);
+      
+            }
+            $zip->close();
+
+            $filePath = public_path($zip_file);
+            $headers = ['Content-Type: application/zip'];
+            $fileName = $zip_file;
+            Toastr::success('Success Generate QR Emas');
+            return response()->download($filePath, $fileName, $headers);
+        }
+        
+    }
+
     public function destroy($id)
     {
         
