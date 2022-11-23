@@ -77,7 +77,10 @@ class GoldController extends Controller
                     'GOLOG_REFF'=>"Generated",
                 ];
                 DB::table('gold_log')->insert($log);
-                QrCode::format('png')->size(1000)->generate($gold['GOLD_ID'], public_path('images/'.$gold['GOLD_ID'].'.png') );
+                // dd(public_path('images/logo/qr_logo.png'));
+                // print_r(public_path('/images/logo/qr_logo.png'));
+                // die();
+                QrCode::format('png')->merge(public_path('images/logo/qr_logo.png'), .2, true)->size(1000)->generate($gold['GOLD_ID'], public_path('images/'.$gold['GOLD_ID'].'.png') );
 
                 
 
@@ -127,6 +130,7 @@ class GoldController extends Controller
         $request->validate([
 		 	'generate_code'=>'required',
 		 ]);
+         
 
         $filePath = public_path($request->generate_code.'.zip');
         if(file_exists($filePath))
@@ -141,7 +145,7 @@ class GoldController extends Controller
             $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
         
             foreach($golds as $gold) { 
-                QrCode::format('png')->size(1000)->generate($gold->GOLD_ID, public_path('images/'.$gold->GOLD_ID.'.png') );
+                QrCode::format('png')->merge(public_path('images/logo/qr_logo.png'), .2, true)->size(1000)->generate($gold->GOLD_ID, public_path('images/'.$gold->GOLD_ID.'.png') );
                 $qr_file = 'images/'.$gold->GOLD_ID.'.png';
                 $zip->addFile(public_path($qr_file), $qr_file);
       
