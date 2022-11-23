@@ -46,6 +46,7 @@
                     <th>ID</th>
                     <th>Berat</th>
                     <th>Serial</th>
+                    <th>Kode Generate</th>
                     <th>fineness</th>
                     <th>di produksi</th>
                     <th>Manufaktur</th>
@@ -58,6 +59,7 @@
                     <td>{{$item->GOLD_ID}}</td>
                     <td>{{$item->GOLD_WEIGHT}}</td>
                     <td>{{$item->GOLD_SERIAL}}</td>
+                    <td>{{$item->generated_code}}</td>
                     <td>{{$item->fineness}}</td>
                     <td>{{$item->produced_by}}</td>
                     <td>{{$item->manufacture->name}}</td>
