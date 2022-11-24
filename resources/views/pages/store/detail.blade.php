@@ -184,5 +184,6 @@
 
 {{-- page scripts --}}
 @section('page-script')
+{!! Toastr::message() !!}
 <script src="{{asset('js/scripts/page-users.js')}}"></script>
 @endsection

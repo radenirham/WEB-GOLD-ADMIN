@@ -44,6 +44,7 @@ class UserController extends Controller
         $request->validate([
 		 	'name'=>'required',
             'email'=>'required',
+            'phone'=>'required',
 		 	'password'=>'required'
 		 ]);
                 $store_id=NULL;
@@ -54,6 +55,7 @@ class UserController extends Controller
                     'id' => uniqid('SGU'),
                     "name" => $request->name,
                     "email" => $request->email,
+                    "phone" => $request->phone,
                     "store_id" =>$store_id,
                     "password" => bcrypt($request->password),
                 ];
@@ -89,12 +91,14 @@ class UserController extends Controller
         
     	$request->validate([
 		 	'name'=>'required',
-		 	'email'=>'required'
+		 	'email'=>'required',
+            'phone'=>'required',
 		 ]);
     	
     	$user = User::find($request->id);
     	$user->name = $request->name;
     	$user->email = $request->email;
+        $user->phone = $request->phone;
         if($request->has('password')){
             $user->password = bcrypt($request->password);
         }

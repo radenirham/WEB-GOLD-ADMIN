@@ -99,6 +99,11 @@ class StoreController extends Controller
 
          $user=User::where('id', $request->user)->first();
 
+         if($user->phone==NULL){
+            Toastr::success('Mohon Update No. Telp User');
+            return back()->with('toast_success','Mohon Update No. Telp User');
+         }
+
          $score = [
             "user_id" => $request->user,
             "store_id" => $request->store,

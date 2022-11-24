@@ -41,7 +41,12 @@
                     <label for="name">Nama</label>
                   </div>
                 </div>
-                
+                <div class="col s12">
+                  <div class="input-field col s12">
+                    <input type="number" name="phone" value="{{$data['phone']}}"class="validate">
+                    <label for="phone">Phone</label>
+                  </div>
+                </div>
                 <div class="col s12">
                   <div class="input-field col s12">
                     <input type="email" name="email" value="{{$data['email']}}" class="validate">

@@ -59,6 +59,12 @@
                 </div>
                 <div class="col s12">
                   <div class="input-field col s12">
+                    <input type="number" name="phone" class="validate">
+                    <label for="phone">Phone</label>
+                  </div>
+                </div>
+                <div class="col s12">
+                  <div class="input-field col s12">
                     <input id="password" type="password" class="validate"name="password" >
                     <label for="password">Password</label>
                   </div>

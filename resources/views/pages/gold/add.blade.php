@@ -36,7 +36,7 @@
                 @csrf
                 <div class="col s12">
                   <div class="input-field col s12">
-                    <input type="number" name="weight" class="validate">
+                    <input type="text" name="weight" class="validate">
                     <label for="weight">weight</label>
                   </div>
                 </div>
