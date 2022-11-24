@@ -7,6 +7,7 @@ use App\Http\Controllers\GoldController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ManufactureController;
+use App\Http\Controllers\BannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,5 +67,14 @@ Route::prefix('admin')->group(function () {
             Route::post('/store/score', [StoreController::class, 'store_scoring'])->name('admin.store.score');
             Route::post('/store/store', [StoreController::class, 'store'])->name('admin.store.store');
             Route::get('/store/delete/{number}', [StoreController::class, 'destroy']);
+
+
+            Route::get('/banner', [BannerController::class, 'index'])->name('admin.banner');
+            Route::get('/banner/add', [BannerController::class, 'add'])->name('admin.banner.add');
+            Route::post('/banner/store', [BannerController::class, 'store'])->name('admin.banner.store');
+            Route::get('/banner/edit/{number}', [BannerController::class, 'edit']);
+            Route::post('/banner/store', [BannerController::class, 'store'])->name('admin.banner.store');
+            Route::post('/banner/update', [BannerController::class, 'update'])->name('admin.banner.update');
+            Route::get('/banner/delete/{number}', [BannerController::class, 'destroy']);
     });
 });

@@ -75,7 +75,7 @@
         </li>
         <li class="bold">
         <a class="waves-effect waves-cyan"
-          href="#"
+          href="{{route('admin.banner')}}"
           class="{{(request()->is('admin/banner'.'*')) ? 'active '.$configData['activeMenuColor'] : '' }}"
                   @if(!empty($configData['activeMenuColor'])) {{'style=background:none;box-shadow:none;'}} @endif>
          <i class="material-icons dp48">picture_in_picture</i>
