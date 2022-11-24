@@ -59,7 +59,7 @@
                             <a href="manufacture/edit/{{$item->id}}" class="btn btn-primary btn-sm" method="post">
                             <i class="material-icons">edit</i>
                             </a>
-                            <a href="manufacture/delete/{{$item->id}}" class="btn btn-danger btn-sm" method="post" onclick="return confirm('Yakin ingin menghapus data?')">
+                            <a href="manufacture/delete/{{$item->id}}"  method="post" onclick="return confirm('Yakin ingin menghapus data?')">
                             <i class="material-icons">delete</i>
                             </a>
                         </td>

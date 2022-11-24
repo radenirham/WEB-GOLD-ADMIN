@@ -67,7 +67,7 @@
                             <a href="#" class="btn btn-sm" method="post">
                             <i class="material-icons">edit</i>
                             </a>
-                            <a href="gold/delete/{{$item->GOLD_ID}}" class="btn btn-danger btn-sm" method="post" onclick="return confirm('Yakin ingin menghapus data?')">
+                            <a href="gold/delete/{{$item->GOLD_ID}}"  method="post" onclick="return confirm('Yakin ingin menghapus data?')">
                             <i class="material-icons">delete</i>
                             </a>
                         </td>

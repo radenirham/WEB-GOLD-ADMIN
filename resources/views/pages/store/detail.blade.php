@@ -49,7 +49,7 @@
             <h6 class="indigo-text m-0" style="font-size:20px;">Status: <span>{{$scoring->status}}</span></h6>
             </div>
             <div class="col s12 m4 users-view-timeline">
-            <h6 class="indigo-text m-0" style="font-size:20px;">File: @if($scoring->file==NULL)<span>Belum Ada File</span> @else <button class="btn btn-primary btn-sm">Download</button> @endif</h6>
+            <h6 class="indigo-text m-0" style="font-size:20px;">File: @if($scoring->file==NULL)<span>Belum Ada File</span> @else <button >Download</button> @endif</h6>
             </div>
         </div>
       <div class="row">
