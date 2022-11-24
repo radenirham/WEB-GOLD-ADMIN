@@ -43,7 +43,7 @@
         <div class="col s12" id="account">
         <div class="row indigo lighten-5 border-radius-4 mb-2" style="height:70px;padding:20px;">
             <div class="col s12 m4 users-view-timeline">
-            <h6 class="indigo-text m-0" style="font-size:20px;">Score: <span>{{$scoring->score}}</span></h6>
+            <h6 class="indigo-text m-0" style="font-size:20px;">Score: <span>@if($scoring->score==NULL) 0 @endif {{$scoring->score}}</span></h6>
             </div>
             <div class="col s12 m4 users-view-timeline">
             <h6 class="indigo-text m-0" style="font-size:20px;">Status: <span>{{$scoring->status}}</span></h6>
@@ -126,10 +126,10 @@
                     <input id="npwp" name="npwp" type="text" class="validate" placeholder="1101-2394-XXX-XXXX">
                     <label for="npwp">NPWP</label>
                   </div>
-                  <div class="col s12 input-field">
+                  {{-- <div class="col s12 input-field">
                     <input id="score" name="score" type="text" class="validate">
                     <label for="score">Score</label>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
               <div class="col s12 display-flex justify-content-start mt-1">

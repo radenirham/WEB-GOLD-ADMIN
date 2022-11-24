@@ -95,7 +95,6 @@ class StoreController extends Controller
             'store'=>'required',
 		 	'no_ktp'=>'required',
             'npwp'=>'required',
-            'score'=>'required',
 		 ]);
 
          $user=User::where('id', $request->user)->first();
@@ -105,7 +104,6 @@ class StoreController extends Controller
             "store_id" => $request->store,
             "no_ktp" => $request->no_ktp,
             "npwp" => $request->npwp,
-            "score" => $request->score,
             "name" => $user->name,
             "email" => $user->email,
             "phone"=> $user->phone,
