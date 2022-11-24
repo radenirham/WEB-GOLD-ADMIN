@@ -62,6 +62,8 @@ Route::prefix('admin')->group(function () {
 
             Route::get('/store', [StoreController::class, 'index'])->name('admin.store');
             Route::get('/store/add', [StoreController::class, 'add'])->name('admin.store.add');
+            Route::get('/store/scoring/{number}', [StoreController::class, 'scoring']);
+            Route::post('/store/score', [StoreController::class, 'store_scoring'])->name('admin.store.score');
             Route::post('/store/store', [StoreController::class, 'store'])->name('admin.store.store');
             Route::get('/store/delete/{number}', [StoreController::class, 'destroy']);
     });

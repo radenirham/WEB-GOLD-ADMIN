@@ -60,10 +60,10 @@
                     <td>{{$item->STORE_STATUS}}</td>
                     <td>{{$item->STORE_DESC}}</td>
                     <td class="text-center">
-                            <a href="#" class="btn btn-primary btn-sm" method="post">
-                            <i class="material-icons">edit</i>
+                            <a href="store/scoring/{{$item->STORE_ID}}" method="post">
+                            <i class="material-icons">content_paste</i>
                             </a>
-                            <a href="store/delete/{{$item->STORE_ID}}" class="btn btn-danger btn-sm" method="post" onclick="return confirm('Yakin ingin menghapus data?')">
+                            <a href="store/delete/{{$item->STORE_ID}}" method="post" onclick="return confirm('Yakin ingin menghapus data?')">
                             <i class="material-icons">delete</i>
                             </a>
                         </td>
