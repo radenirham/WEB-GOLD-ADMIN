@@ -64,7 +64,7 @@
                     <td>{{$item->produced_by}}</td>
                     <td>{{$item->manufacture->name}}</td>
                     <td class="text-center">
-                            <a href="#" class="btn btn-sm" method="post">
+                            <a href="#"  method="post">
                             <i class="material-icons">edit</i>
                             </a>
                             <a href="gold/delete/{{$item->GOLD_ID}}"  method="post" onclick="return confirm('Yakin ingin menghapus data?')">
