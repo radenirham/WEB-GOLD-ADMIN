@@ -60,12 +60,11 @@
                   </div>
                 </div>
                 
-                 <div class="divider mb-1 mt-1"></div>
-                  <div class="row section">
+                  <div class="col s12">
                     <div class="col s12 m4 l3">
-                      <p>Foto Toko</p>
+                      <p>Upload Foto Toko</p>
                     </div>
-                    <div class="col s12 m8 l9">
+                    <div class="input-field col s12">
                       <input type="file" id="input-file-now-custom-2" name="image"class="dropify" data-height="500" />
                     </div>
                   </div>
